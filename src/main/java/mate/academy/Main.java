@@ -11,6 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
+    // Logging configuration completed: log4j2.xml + .gitignore + no TODOs
 
     public static void main(String[] args) {
 
