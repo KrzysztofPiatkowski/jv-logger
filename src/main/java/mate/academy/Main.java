@@ -16,10 +16,12 @@ public class Main {
 
         AuthenticationService authenticationService = new AuthenticationServiceImpl();
         User user;
+        String login = "bob";
+
         try {
-            user = authenticationService.login("bob", "1234");
+            user = authenticationService.login(login, "1234");
         } catch (AuthenticationException e) {
-            logger.error("Authentication failed ", e);
+            logger.error("Authentication failed for user '{}'", login, e);
             return;
         }
         OrderService orderService = new OrderServiceImpl();
